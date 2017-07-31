@@ -1,11 +1,28 @@
 <?php
+
+require_once("./printstring.php");
+//echoo();
+
 //$mine_qua 雷的数量
+echo "请输入雷的数量";
+$mine_qua = trim(fgets(STDIN));
+echo "雷的数量为$mine_qua\n";
+
 //$x_scan 用户选择雷横坐标
+echo "请输入横坐标";
+$x_scan = trim(fgets(STDIN));
+
+
 //$y_scan 用户选择雷纵坐标
+echo "请输入纵坐标";
+$y_scan = trim(fgets(STDIN));
+
+
 
 //初始化$is_mine
-for($i = 0; $i < count($is_mine)); $i++{
-	for($j = 0; $j < count($is_mine[$i]); $j++){
+$is_mine[][] = 0;
+for($i = 0; $i < $mine_qua; $i++){
+	for($j = 0; $j < $mine_qua; $j++){
 		$is_mine[$i][$j] = 0;
 	}
 }
@@ -14,10 +31,16 @@ for($i = 0; $i < count($is_mine)); $i++{
 //给$is_mine赋值
 while($mine_qua > 0){
 	//下雷
-	$rand1 = rand(0,count($is_mine));
-	$rand2 = rand(0,count($is_mine));
+	$rand1 = rand(0,count($mine_qua));
+	$rand2 = rand(0,count($mine_qua));
 	$is_mine[$rand1][$rand2] = 9;
 	$mine_qua--;
+
+	//禁止边缘处放雷
+//	if($rand1 = 0 or $rand1 = 9 or $rand2 = 0 or $rand2 = 9){
+//		$mine_qua++;
+//		continue;
+//	}
 
 	//相邻地区显示数字
 	$is_mine[$rand1-1][$rand2-1]++;
@@ -32,7 +55,7 @@ while($mine_qua > 0){
 
 
 //显示雷的代码
-for($i = 0; $i < count($show_mine)); $i++{
+for($i = 0; $i < count($show_mine); $i++){
 	for($j = 0; $j < count($show_mine[$i]); $j++){
 		$show_mine[$i][$j] = "@";
 	}
@@ -50,10 +73,6 @@ do{
 			}
 			break;
 		
-		case 1~8:
-			$show_mine[$x_scan][$y_scan] = $is_mine[$x_scan][$y_scan];
-			break;
-
 		case 0:
 			$shw_sch == false;
 
@@ -112,18 +131,24 @@ do{
 			}
 
 			break;
+
+		default:
+			$show_mine[$x_scan][$y_scan] = $is_mine[$x_scan][$y_scan];
+			break;
+
 	}
-}while($cnt_sch)
+}while($cnt_sch);
+	
+	var_dump($show_mine);
+	exit;
+
 
 //显示雷
-for($i = 0; $i < count($show_mine); $i++){
-	for($j = 0; $j < count($show_time[$i]); $j++){
-		echo $show_mine[$i][$j] . " | ";
+for($k = 0; $k < 9; $k++){
+	for($m = 0;$m < 9; $m++){
+		echo $show_mine[$k][$m] . " | ";
 	}
-	echo "----------------<br>"'
+	echo "-------------/\n/";
 }
-
-
-
 
 

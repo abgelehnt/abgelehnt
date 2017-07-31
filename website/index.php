@@ -1,5 +1,6 @@
 <?php
 session_start();
+phpinfo();
 require_once("dbsql.php");
 require_once("table.php");
 ?>
@@ -22,7 +23,7 @@ require_once("table.php");
 		</div>
 
 		<?php
-		//require_once( "show_msg.php" );
+		require_once( "show_msg.php" );
 		?>		
 
 
