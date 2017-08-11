@@ -1,6 +1,5 @@
 <?php
 session_start();
-phpinfo();
 require_once("dbsql.php");
 require_once("table.php");
 ?>
