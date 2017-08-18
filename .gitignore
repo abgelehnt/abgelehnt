@@ -31,3 +31,10 @@
 # Debug files
 *.dSYM/
 *.su
+
+# keys
+authorized_keys
+id_rsa
+id_rsa.pub
+rsa_public
+rsa_private

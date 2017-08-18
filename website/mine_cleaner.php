@@ -1,11 +1,14 @@
 <?php
-//2017.7.5创建
+// Php File
+//  Filename: rsa.php
+//   Created: 2017-08-11 06:01:31
+//      Desc: TODO (some description)
+//    Author: abgelehnt, abgelehnt@foxmail.com
+//   Company: Yourcompany
 
 
 require_once("./printstring.php");
 //echoo();
-
-
 
 
 //$mine_qua 雷的数量
@@ -24,8 +27,6 @@ $y_scan = 9;//trim(fgets(STDIN));
 echo "纵坐标为$y_scan\n\n";
 
 
-
-
 //初始化$is_mine
 $is_mine[][] = 0;
 for($i = 0; $i < 9; $i++){
@@ -33,8 +34,6 @@ for($i = 0; $i < 9; $i++){
 		$is_mine[$i][$j] = 0;
 	}
 }
-
-
 
 
 //给$is_mine赋值
@@ -49,15 +48,14 @@ while($mine_qua > 0){
 		continue;
 
 
+	//禁止边缘处放雷
+	if($rand1 == 0 or $rand1 == 8 or $rand2 == 0 or $rand2 == 8)
+		continue;
+
+
 	//下雷
 	$is_mine[$rand1][$rand2] = 9;
 	$mine_qua--;
-
-	//禁止边缘处放雷
-	if($rand1 == 0 or $rand1 == 8 or $rand2 == 0 or $rand2 == 8){
-		$mine_qua++;
-		continue;
-	}
 
 
 	//相邻地区显示数字
@@ -72,8 +70,6 @@ while($mine_qua > 0){
 }
 
 
-
-
 //显示雷的代码并初始化$show_mine
 for($i = 0; $i < 9; $i++){
 	for($j = 0; $j < 9; $j++){
@@ -83,6 +79,45 @@ for($i = 0; $i < 9; $i++){
 }
 
 
+//快捷输出周围的雷
+function pri_around($number){
+	switch($number){
+		case 1:
+			return '$is_mine[$x_scan-1][$y_scan-1]';
+		case 2:
+			return '$is_mine[$x_scan-1][$y_scan]';
+		case 3:
+			return '$is_mine[$x_scan-1][$y_scan+1]';
+		case 4:
+			return '$is_mine[$x_scan][$y_scan-1]';
+		case 5:
+			return '$is_mine[$x_scan][$y_scan+1]';
+		case 6:
+			return '$is_mine[$x_scan+1][$y_scan-1]';
+		case 7:
+			return '$is_mine[$x_scan+1][$y_scan]';
+		case 8:
+			return '$is_mine[$x_scan-1][$y_scan+1]';
+		case -1:
+			return '$show_mine[$x_scan-1][$y_scan-1]';
+		case -2:
+			return '$show_mine[$x_scan-1][$y_scan]';
+		case -3:
+			return '$show_mine[$x_scan-1][$y_scan+1]';
+		case -4:
+			return '$show_mine[$x_scan][$y_scan-1]';
+		case -5:
+			return '$show_mine[$x_scan][$y_scan+1]';
+		case -6:
+			return '$show_mine[$x_scan+1][$y_scan-1]';
+		case -7:
+			return '$show_mine[$x_scan+1][$y_scan]';
+		case -8:
+			return '$show_mine[$x_scan+1][$y_scan+1]';
+		default:
+			die("Error/n");
+	}
+}
 
 
 //@未知; 0~8周围雷的数量;  >=9是雷
@@ -105,10 +140,20 @@ switch($is_mine[$x_scan][$y_scan]){
 		//是否继续搜索附近的雷
 		$shw_sch == false;
 
-		//如果为空 则搜寻四周的雷
+
+		$cnt_sch = array();
+		do{
+			for($i = 1; $i++; $i <= 8){
+				if(pri_around($i) == 0){
+					array_push($cnt_sch, "$i");
+					pri_around(-$i) = pri_around($i);
+				}
+			}
+		}while($cnt_sch !== NULL)
+
 
 		//决定是否继续循环搜寻四周的雷
-		$cnt_sch = true;
+		$cnt_sch = array();
 		while($cnt_sch){
 		$cnt_sch = false;
 		if($is_mine[$x_scan-1][$y_scan-1] == 0){
@@ -176,8 +221,6 @@ switch($is_mine[$x_scan][$y_scan]){
 	default:
 		echo "Programme ERROR.";
 }
-
-
 
 
 //显示雷
