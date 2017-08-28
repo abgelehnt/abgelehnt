@@ -38,3 +38,7 @@ id_rsa
 id_rsa.pub
 rsa_public
 rsa_private
+*.crt
+*.csr
+*.key
+*.pem
