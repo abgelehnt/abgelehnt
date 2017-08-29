@@ -1,9 +1,12 @@
 <?php
 session_start();
 
+//Uses Thinkphp
+//require './thinkphp/index.php';
 
-require_once("dbsql.php");
-require_once("table.php");
+
+require_once("./php_files/dbsql.php");
+require_once("./php_files/table.php");
 ?>
 
 <!doctype html>
@@ -18,13 +21,13 @@ require_once("table.php");
 		<div class="main_div">
 	
 			<?php
-				require_once("login.php");
+				require_once("./php_files/login.php");
 			?>
 
 		</div>
 
 		<?php
-		require_once( "show_msg.php" );
+		require_once( "./php_files/show_msg.php" );
 		?>		
 
 
