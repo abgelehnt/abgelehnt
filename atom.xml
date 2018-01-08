@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.abgelehnt.tk/"/>
-  <updated>2017-12-21T10:08:44.596Z</updated>
+  <updated>2018-01-08T01:52:21.915Z</updated>
   <id>https://www.abgelehnt.tk/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>hexo的安装和使用</title>
-    <link href="https://www.abgelehnt.tk/2017/12/03/hexo%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/"/>
-    <id>https://www.abgelehnt.tk/2017/12/03/hexo的安装和使用/</id>
+    <link href="https://www.abgelehnt.tk/hexo/17084.html"/>
+    <id>https://www.abgelehnt.tk/hexo/17084.html</id>
     <published>2017-12-03T18:46:52.000Z</published>
-    <updated>2017-12-21T10:08:44.596Z</updated>
+    <updated>2018-01-08T01:52:21.915Z</updated>
     
     <content type="html"><![CDATA[<p>不得不说，hexo为我们提供了一个非常简单快捷的静态网站解决方式。而且它还支持文章分类的常用功能<br>hexo用的md的语法极大的方便了我们的写作</p><hr><a id="more"></a><h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>hexo的安装在<a href="https://hexo.io/docs/" target="_blank" rel="noopener">官网</a>上已经有了明确的说明，这里就简单介绍一下。<br></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt install git</span><br><span class="line">$ npm install nvm //这步之后要重启一下终端</span><br><span class="line">$ nvm install stable</span><br><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure><p></p><h3 id="创建自己的网站目录"><a href="#创建自己的网站目录" class="headerlink" title="创建自己的网站目录"></a>创建自己的网站目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir www</span><br><span class="line">$ <span class="built_in">cd</span> www</span><br><span class="line">$ hexo init</span><br></pre></td></tr></table></figure><h3 id="发表自己的第一篇blog"><a href="#发表自己的第一篇blog" class="headerlink" title="发表自己的第一篇blog"></a>发表自己的第一篇blog</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo n <span class="string">"my-new-blog"</span></span><br></pre></td></tr></table></figure><p>md文件在./source/_post/目录下，我们需要通过修改md文件来制作网页。<br></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure><p></p><p>通过在浏览器内访问<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> ,我们能看到我们发表的第一篇blog和原始的hello-world</p><h3 id="部署到git"><a href="#部署到git" class="headerlink" title="部署到git"></a>部署到git</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure><p>修改站点的_config.yml配置文件</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="string">&#123;$你的仓库&#125;</span></span><br></pre></td></tr></table></figure><p>然后输入<code>bash $ hexo d</code>即可自动部署</p>]]></content>
     
@@ -38,10 +38,10 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://www.abgelehnt.tk/2017/11/21/hello-world/"/>
-    <id>https://www.abgelehnt.tk/2017/11/21/hello-world/</id>
+    <link href="https://www.abgelehnt.tk/uncategorized/16107.html"/>
+    <id>https://www.abgelehnt.tk/uncategorized/16107.html</id>
     <published>2017-11-21T18:12:13.000Z</published>
-    <updated>2017-12-21T09:58:31.117Z</updated>
+    <updated>2018-01-08T01:52:21.915Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
     
@@ -59,10 +59,10 @@
   
   <entry>
     <title>putty密钥远程连接linux系统</title>
-    <link href="https://www.abgelehnt.tk/2017/08/26/putty%E5%AF%86%E9%92%A5%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5linux%E7%B3%BB%E7%BB%9F/"/>
-    <id>https://www.abgelehnt.tk/2017/08/26/putty密钥远程连接linux系统/</id>
+    <link href="https://www.abgelehnt.tk/Linux/24587.html"/>
+    <id>https://www.abgelehnt.tk/Linux/24587.html</id>
     <published>2017-08-27T00:30:22.000Z</published>
-    <updated>2017-12-21T10:03:42.911Z</updated>
+    <updated>2018-01-08T01:52:21.915Z</updated>
     
     <content type="html"><![CDATA[<p>有的时候我们需要通过win远程连接linux的服务器，而桌面链接的等待时间又过长，所以用ssh进行远程连接就是一个不错的选择。</p><p>首先服务器下载ssh<br></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install openssh-server</span><br></pre></td></tr></table></figure><p></p><p>在win平台上下载putty</p><p>安装并打开putty，输入ip地址后点击右下方的open就可以用了。</p><p>输入ip后在Saved Sessions后输入一个场景名，点击Save，方便以后使用。</p><p>但是，每次都输入用户名和密码太过于麻烦，putty是支持用密钥连接的，我们可以利用一下。</p><p>Data中设置自动登入的用户名</p><p>用puttygen生成一个密钥<br>如果是puttygen直接导出公钥的话需要把公钥处理一下，删除头部和尾部并把公钥处理成一行，在头部增加ssh-rsa<br>然后公钥拷贝到服务器中的~/.ssh/authorized_keys文件中去。<br>没有的话新建一个，把权限该成600</p><p>putty里connection-&gt;ssh-&gt;auth-&gt;private key file for auth添加密钥</p><p>成功</p>]]></content>
     
@@ -82,10 +82,10 @@
   
   <entry>
     <title>更改apache2站点目录</title>
-    <link href="https://www.abgelehnt.tk/2017/07/29/%E6%9B%B4%E6%94%B9apache2%E7%AB%99%E7%82%B9%E7%9B%AE%E5%BD%95/"/>
-    <id>https://www.abgelehnt.tk/2017/07/29/更改apache2站点目录/</id>
+    <link href="https://www.abgelehnt.tk/Linux/17047.html"/>
+    <id>https://www.abgelehnt.tk/Linux/17047.html</id>
     <published>2017-07-30T02:30:23.000Z</published>
-    <updated>2017-12-21T10:02:50.398Z</updated>
+    <updated>2018-01-08T01:52:21.927Z</updated>
     
     <content type="html"><![CDATA[<p>一般apache2的站点目录都是在/var/www目录下，但是很多时候我们会更想把站点目录放在用户目录下，这样可以更好的把用户间分隔开。</p><p>更改主配置文件中的配置<br></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo vi /etc/apache2/apache2.conf</span><br></pre></td></tr></table></figure><p></p><p>找到/var/www/html并更改为/home/<br>大概在第165行的样子<br></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;Directory /home/&gt;</span><br><span class="line">Options Indexes FollowSymLinks</span><br><span class="line">AllowOverride None</span><br><span class="line">Require all granted</span><br><span class="line">&lt;/Directory&gt;</span><br></pre></td></tr></table></figure><p></p><p>接着是http的配置文件<br></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo vi /etc/apache2/sites-available/000-default.conf</span><br></pre></td></tr></table></figure><p></p><p>找到DocumentRoot后的/var/www/html，改成/home/chi</p><p>让apache2重新加载一下配置文件<br></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo service apache2 reload</span><br></pre></td></tr></table></figure><p></p><p>网站打不开<br>因为我们没有权限读取网站文件<br></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ chmod 701 /home/chi/www/</span><br></pre></td></tr></table></figure><p></p><p>网站能打开了</p>]]></content>
     

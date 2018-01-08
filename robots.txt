@@ -12,3 +12,4 @@ Disallow: /vendors/
 Disallow: /fancybox/
 
 Sitemap: https://www.abgelehnt.tk/sitemap.xml
+Sitemap: https://www.abgelehnt.tk/baidusitemap.xml
