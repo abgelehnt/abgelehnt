@@ -62,9 +62,9 @@
     <link href="https://www.abgelehnt.tk/24587.html"/>
     <id>https://www.abgelehnt.tk/24587.html</id>
     <published>2017-08-27T00:30:22.000Z</published>
-    <updated>2018-04-15T03:26:40.833Z</updated>
+    <updated>2018-04-15T03:30:16.335Z</updated>
     
-    <content type="html"><![CDATA[<p>有的时候我们需要通过win远程连接linux的服务器，而桌面链接的等待时间又过长，所以用ssh进行远程连接就是一个不错的选择。</p><p>首先服务器下载ssh<br></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt install openssh-server</span><br></pre></td></tr></table></figure><p></p><p>在win平台上下载putty</p><p>安装并打开putty，输入ip地址后点击右下方的open就可以用了。</p><p>输入ip后在Saved Sessions后输入一个场景名，点击Save，方便以后使用。</p><h3 id="用私钥和公钥免密连接"><a href="#用私钥和公钥免密连接" class="headerlink" title="用私钥和公钥免密连接"></a>用私钥和公钥免密连接</h3><p>用puttygen生成一个密钥<br>如果是puttygen直接导出公钥的话需要把公钥处理一下，删除头部和尾部并把公钥处理成一行，在头部增加“ssh-rsa”<br>然后公钥拷贝到服务器中的~/.ssh/authorized_keys文件中去。<br>没有的话新建一个，把权限该成600</p><p>putty的Data中设置自动登入的用户名<br>putty里connection-&gt;ssh-&gt;auth-&gt;private key file for auth添加密钥</p><p>成功</p>]]></content>
+    <content type="html"><![CDATA[<p>有的时候我们需要通过win远程连接linux的服务器，而桌面链接的等待时间又过长，所以用ssh进行远程连接就是一个不错的选择。</p><p>首先服务器下载ssh<br></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt install openssh-server</span><br></pre></td></tr></table></figure><p></p><p>在win平台上下载putty</p><p>安装并打开putty，输入ip地址后点击右下方的open就可以用了。</p><p>输入ip后在Saved Sessions后输入一个场景名，点击Save，方便以后使用。</p><h3 id="用私钥和公钥免密连接"><a href="#用私钥和公钥免密连接" class="headerlink" title="用私钥和公钥免密连接"></a>用私钥和公钥免密连接</h3><p>用puttygen生成一个密钥</p><p>如果是puttygen直接导出公钥的话需要把公钥处理一下，删除头部和尾部并把公钥处理成一行，在头部增加“ssh-rsa”</p><p>然后公钥拷贝到服务器中的~/.ssh/authorized_keys文件中去。</p><p>没有的话新建一个，把权限该成600</p><p>putty的Data中设置自动登入的用户名</p><p>putty里connection-&gt;ssh-&gt;auth-&gt;private key file for auth添加密钥</p><p>成功</p>]]></content>
     
     <summary type="html">
     
