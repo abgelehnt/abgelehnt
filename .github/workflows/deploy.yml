@@ -21,4 +21,11 @@ jobs:
         uname -a
         openssl version -a
         ls /bin | grep openssl
-        
+  ubuntu-22:
+    runs-on: ubuntu-22.04
+    steps:
+    - name: Install mdbook
+      run: |
+        uname -a
+        openssl version -a
+        ls /bin | grep openssl        
