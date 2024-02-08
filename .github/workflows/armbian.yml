@@ -1,0 +1,14 @@
+name: Build Armbian
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    
+    - name: Build Armbian
+      uses: armbian/build@v23.11.2
+      with:
+          armbian_token:     "${{ secrets.GITHUB_TOKEN }}"  # GitHub token                 # userspace
+          armbian_board:     "onecloud"                   # build targe
