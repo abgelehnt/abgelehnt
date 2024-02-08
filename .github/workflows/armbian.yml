@@ -8,7 +8,9 @@ jobs:
     steps:
     
     - name: Build Armbian
-      uses: armbian/build@v23.11.2
+      uses: armbian/build@main
       with:
           armbian_token:     "${{ secrets.GITHUB_TOKEN }}"  # GitHub token                 # userspace
           armbian_board:     "onecloud"                   # build targe
+          armbian_release:   "jammy"
+          armbian_target:    "build"
